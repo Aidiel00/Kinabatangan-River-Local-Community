@@ -1,0 +1,150 @@
+<html>
+<head>
+    <title>Gallery</title>
+
+</head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylo.css">
+<link rel="shortcut icon" href="images/logos.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  
+<body>
+
+    <div class="navbar">
+      
+  <div class="dropdown">
+    <button class="dropbtn">About Kinabatangan 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="History.html">History</a>
+      <a href="Location.html">Location</a>
+      <a href="Kinabatangan River.html">Kinabatangan River</a>
+    </div>
+  </div> 
+  <a href="community.html">Community</a>
+
+<a href="activities.html">Activities</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact us.html">Contact Us</a>
+
+<a href="index.html">Home</a>
+
+</div>
+
+<h2 style="text-align:center; color: rgb(38, 146, 28);" color="white" >GALLERY OF KINABATANGAN RIVER</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/gallery1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/gallery7.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/gallery3.png" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="images/gallery8.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="images/Gallery5.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="images/gallery10.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/gallery1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The woods at Kinabatangan River">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery7.jpg" style="width:100%" onclick="currentSlide(2)" alt="The evening view of Kinabatangan River">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery3.png" style="width:100%" onclick="currentSlide(3)" alt="The view inside Kinabatangan River">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery8.jpg" style="width:100%" onclick="currentSlide(4)" alt="The afternoon sunset at Kinabatangan River">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Gallery5.jpg" style="width:100%" onclick="currentSlide(5)" alt="The view from jetty at Kinabatangan River">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/gallery10.jpg" style="width:100%" onclick="currentSlide(6)" alt="The sunrise view at Kinabatangan River">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+<footer>
+
+  <img src="images/logos.png" width="5%">
+
+  <p class="footer-H" >Copyright ©2022 Kinabatangan River Local Community. designed by Kinabatangan River Local Community</p>
+
+  <div class="icons">
+  <a href="https://www.facebook.com/kinabatanganriveradventure/" target="_blank" class="fa fa-facebook" style="color: white;"></a>
+    <a href="https://www.instagram.com/explore/locations/329443958/kinabatangan-river-malaysian-borneo/?hl=en" target="_blank" class="fa fa-instagram" style="color: white;"></a>
+    <a href="https://youtu.be/HIr5zlQWfRo" target="_blank" class="fa fa-youtube" style="color: white;"></a>
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>
